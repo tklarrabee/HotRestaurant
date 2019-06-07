@@ -35,7 +35,7 @@ var waitList = [{
 
 app.get("/", function(req, res) {
     // res.send("Welcome to the Star Wars Page!")
-    res.sendFile(path.join(__dirname, "example.html"));
+    res.sendFile(path.join(__dirname, "index.html"));
 });
 
 app.get("/tables", function (req, res) {
@@ -45,7 +45,7 @@ app.get("/tables", function (req, res) {
 
 app.get("/reservation", function (req, res) {
     // res.send("Welcome to the Star Wars Page!")
-    res.sendFile(path.join(__dirname, "ExampleReservation.html"));
+    res.sendFile(path.join(__dirname, "make-res.html"));
 });
 
 app.get("/api/tables", function (req, res) {
