@@ -38,12 +38,15 @@ app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "index.html"));
 });
 
-app.get("/", function (req, res) {
+app.get("/tables", function (req, res) {
     // res.send("Welcome to the Star Wars Page!")
     res.sendFile(path.join(__dirname, "index.html"));
 });
 
-
+app.get("/reservation", function (req, res) {
+    // res.send("Welcome to the Star Wars Page!")
+    res.sendFile(path.join(__dirname, "index.html"));
+});
 
 app.get("/api/tables", function (req, res) {
     return res.json(reservations);
