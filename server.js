@@ -43,9 +43,9 @@ app.get("/tables", function (req, res) {
     res.sendFile(path.join(__dirname, "tables.html"));
 });
 
-app.get("/reservation", function (req, res) {
+app.get("/reserve", function (req, res) {
     // res.send("Welcome to the Star Wars Page!")
-    res.sendFile(path.join(__dirname, "ExampleReservation.html"));
+    res.sendFile(path.join(__dirname, "make-Res.html"));
 });
 
 app.get("/api/tables", function (req, res) {
@@ -80,10 +80,3 @@ app.post("/api/reservation", function (req, res) {
 app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
 });
-  
-// What to track
-// Reservations
-const tables = [];
-const waiting = [];
-
-// What to do
