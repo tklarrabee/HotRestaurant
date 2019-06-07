@@ -56,3 +56,28 @@ app.get("/api/waitlist", function (req, res) {
     return res.json(waitList);
 });
 
+app.post("/api/reservation", function (req, res) {
+
+    var newReservation = req.body;
+
+    console.log(newReservation);
+
+    // We then add the json the user sent to the character array
+    if(reservations.length < 5){
+        reservations.push(newReservation);
+        console.log("Some bitch got a table")
+        res.json(true)
+    }else{
+        waitList.push(newReservation);
+        console.log("Some bitch is gonna wait");
+        res.json(false);
+    }
+
+    // We then display the JSON to the users
+    
+});
+
+app.listen(PORT, function () {
+    console.log("App listening on PORT " + PORT);
+});
+  
